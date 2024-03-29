@@ -1,0 +1,145 @@
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+.lora-font {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
+  }
+body{
+    position: relative;
+    background-image: url("pexels-simon-berger-1323550.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+section{
+    position: absolute;
+    top:  20%;
+    width: clamp(200px,60vw,600px);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 8px 17px 1px rgba(10,10,10,0.77);
+    -webkit-box-shadow: 5px 8px 17px 1px rgba(10,10,10,0.77);
+    -moz-box-shadow: 5px 8px 17px 1px rgba(10,10,10,0.77);
+}
+h1{
+    text-align: center;
+    font-size: clamp(11px,3vw,33px);
+    margin: 20px 0;
+    i{
+        padding-left: 29px;
+        font-size: clamp(12px,4vw,33px);
+    }
+}
+.input_container{
+    display: flex; 
+    padding-left: 4%;
+    position: relative;
+    height: clamp(30px,18vw,45px);
+    input{
+        width:90% ;
+        text-align: center;
+        font-size: clamp(10px,3vw,20px);
+        border-radius: 10px;
+        border: none;
+    }
+    input:focus, input:hover {
+        outline: none;
+    }
+    #add{
+        border-radius: 10px;
+        border: none;
+        width: 20%;
+        height: clamp(30px,18vw,45px);
+        font-size: clamp(12px,3vw,16px);
+        position: absolute;
+        right: 6%;
+        cursor: pointer;
+        transition: all .3s linear;
+    }
+    #add:hover{
+        background-color: black;
+        color: white;
+    }
+}
+.informe{
+    font-size: clamp(10px,2vw,16px);
+    margin-top: 13px;margin-left: 30px;
+    width: 65%;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid white;
+    background-color: rgb(230, 78, 78);
+    color: white;
+    display: none;
+}
+.items_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    max-height: 330px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    .item{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: clamp(26px,4vw,40px);
+        width: 87%;
+        background-color:rgb(209, 203, 203);
+        margin-top: 10px;
+        font-size: clamp(10px,3vw,16px);
+        .checkbox{
+            width: clamp(16px,5%,70px);
+            margin-left: 0.7vw;
+        }
+        h3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 80%;
+        }
+        button{
+            width: 9%;
+            border: none;
+            cursor: pointer;
+            i{
+                font-size: clamp(14px,3vw,22px);
+                transition: all .2s linear;
+            }
+            i:hover{
+                padding-bottom: 6%;
+                color: red;
+            }
+        }
+    }
+}
+.checked h3 {
+    text-decoration: line-through;
+    color: gray;
+}
+@media screen and (max-width:700px) {
+    section{
+        width: clamp(200px,90%,400px);
+    }
+    .input_container{
+        height: clamp(30px,7vw,45px);
+        #add{
+            height: clamp(30px,7vw,45px);
+        }
+    }
+}
